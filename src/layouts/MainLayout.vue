@@ -1,25 +1,25 @@
 <template>
 	<div>
-		<Header />
+		<l-header />
 			<main>
 				<h2>
 					Main
 				</h2>
 				<router-view />
 			</main>
-		<Footer />
+		<l-footer />
 	</div>
 </template>
 
 <script>
-	import Header from '@/components/layout/l-Header.vue';
-	import Footer from '@/components/layout/l-Footer.vue';
+	import lHeader from '@/components/layout/l-header.vue';
+	import lFooter from '@/components/layout/l-footer.vue';
 	
 	export default {
 		name: 'main-layout',
 		components: {
-			Header,
-			Footer
+			lHeader,
+			lFooter
 		}
 	}
 </script>
