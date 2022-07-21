@@ -48,4 +48,8 @@
 	
 	// общие стили
 	@import '@/styles/main.scss';
+	
+	#app {
+		min-height: 100vh;
+	}
 </style>

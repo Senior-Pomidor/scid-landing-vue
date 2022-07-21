@@ -1,7 +1,7 @@
 <template>
-	<div>
+	<div id="app-content">
 		<l-header />
-			<main>
+			<main class="l-page">
 				<h2>
 					Main
 				</h2>
@@ -23,3 +23,21 @@
 		}
 	}
 </script>
+
+<style lang="scss">
+	#app-content {
+		display: flex;
+		flex-wrap: wrap;
+		min-height: 100vh;
+		
+		header,
+		main,
+		footer {
+			width: 100%;
+		}
+		
+		footer {
+			align-self: flex-end;
+		}
+	}
+</style>
