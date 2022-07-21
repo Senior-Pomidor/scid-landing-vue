@@ -70,4 +70,47 @@ a {
 	}
 }
 
-
+.social {	
+	&--facebook {
+		@include webfont-icon($webfont-icon--facebook);
+	}
+	&--instagram {
+		@include webfont-icon($webfont-icon--instagram);
+	}
+	&--mail {
+		@include webfont-icon($webfont-icon--mail);
+		
+		&::before {
+			font-size: 0.875rem;
+		}
+	}
+	&--telegram {
+		@include webfont-icon($webfont-icon--telegram);
+		
+		&::before {
+			font-size: 0.8rem;
+		}
+	}
+	&--vk {
+		@include webfont-icon($webfont-icon--vk);
+		
+		&::before {
+			font-size: 0.625rem;
+		}
+	}
+	&--watsapp {
+		@include webfont-icon($webfont-icon--watsapp);
+	}
+	
+	&::before {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		color: $color-white;
+		background-color: $color-accent;
+		border-radius: 50%;
+		margin-right: .5rem;
+	}
+}
