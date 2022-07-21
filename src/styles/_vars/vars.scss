@@ -1,1 +1,21 @@
-$border: 1px solid blue;
+@import 'colors.scss';
+
+$breakpoint-xs: 510px;
+$breakpoint-sm: 798px;
+$breakpoint-md: 1054;
+$breakpoint-lg: 1270;
+
+$container-padding: 1rem;
+
+$color-accent: $color-green;
+$body-color: $color-light-black;
+
+$link-color: $body-color;
+$link-color--hover: $color-accent;
+$link-color--active: $color-red;
+
+$btn-border-color: $link-color;
+$btn-border-color--hover: $link-color--hover;
+$btn-border-color--active: $link-color--active;
+
+$btn-accent-border-color: $color-accent;

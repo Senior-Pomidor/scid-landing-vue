@@ -29,7 +29,7 @@
 
 <style lang="scss">
 	// флексбокс сетка http://flexboxgrid.com/
-	@import '~flexboxgrid/dist/flexboxgrid.min.css';
+	// @import '~flexboxgrid/dist/flexboxgrid.min.css';
 	
 	//fonts
 	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
