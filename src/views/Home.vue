@@ -42,32 +42,32 @@ export default {
 				{
 					id: '1',
 					link: '/',
-					img: '/img/content/service-picture-1.jpg',
+					img: 'img/content/service-picture-1.jpg',
 					desc: 'Кадастровые работы в&nbsp;отношении земельных участков'
 				}, {
 					id: '2',
 					link: '/',
-					img: '/img/content/service-picture-2.jpg',
+					img: 'img/content/service-picture-2.jpg',
 					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}, {
 					id: '3',
 					link: '/',
-					img: '/img/content/service-picture-3.jpg',
+					img: 'img/content/service-picture-3.jpg',
 					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}, {
 					id: '4',
 					link: '/',
-					img: '/img/content/service-picture-4.jpg',
+					img: 'img/content/service-picture-4.jpg',
 					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}, {
 					id: '5',
 					link: '/',
-					img: '/img/content/service-picture-5.jpg',
+					img: 'img/content/service-picture-5.jpg',
 					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}, {
 					id: '6',
 					link: '/',
-					img: '/img/content/service-picture-6.jpg',
+					img: 'img/content/service-picture-6.jpg',
 					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}
 			],
