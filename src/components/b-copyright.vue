@@ -6,7 +6,7 @@
 
 <script>
 	export default {
-		name: 'copyright',
+		name: 'b-copyright',
 		props: {
 			info: {
 				type: Object,

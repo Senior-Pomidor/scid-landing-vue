@@ -97,19 +97,19 @@
 			</div>
 
 			<div class="l-footer__copyright">
-				<Copyright :info="{ year: '2022', owner: 'SCID' }"></Copyright>
+				<b-copyright :info="{ year: '2022', owner: 'SCID' }"></b-copyright>
 			</div>
 		</div>
 	</footer>
 </template>
 
 <script>
-import Copyright from '@/components/Copyright.vue';
+import bCopyright from '@/components/b-copyright.vue';
 
 export default {
 	name: 'l-header',
 	components: {
-		Copyright
+		bCopyright
 	}
 }
 </script>
