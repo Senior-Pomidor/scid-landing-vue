@@ -82,10 +82,10 @@ export default {
 				}
 			],
 			slides: [
-				{id: 1, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
-				{id: 2, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
-				{id: 3, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
-				{id: 4, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'}
+				{id: 1, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: 'img/content/slides/slide-1.jpg'},
+				{id: 2, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: 'img/content/slides/slide-1.jpg'},
+				{id: 3, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: 'img/content/slides/slide-1.jpg'},
+				{id: 4, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: 'img/content/slides/slide-1.jpg'}
 			],
 		}
 	 }
