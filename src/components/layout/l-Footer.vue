@@ -14,17 +14,17 @@
 					<ul class="l-footer__list">
 						<li class="l-footer__list-item">
 							<a href="tel:+7 (926) 126-64-57" class="l-footer__link l-footer__link--contact">
-								<i class="social social--watsapp"></i>7 (926) 126-64-57
+								<span class="nobr"><i class="social social--watsapp"></i>7 (926) 126-64-57</span>
 							</a>
 						</li>
 						<li class="l-footer__list-item">
 							<a href="tel:+7 (926) 126-64-57" class="l-footer__link l-footer__link--contact">
-								<i class="social social--mail"></i>7 (926) 126-64-57
+								<span class="nobr"><i class="social social--mail"></i>7 (926) 126-64-57</span>
 							</a>
 						</li>
 						<li class="l-footer__list-item">
 							<a href="tel:+7 (926) 126-64-57" class="l-footer__link l-footer__link--contact">
-								<i class="social social--telegram"></i>7 (926) 126-64-57
+								<span class="nobr"><i class="social social--telegram"></i>7 (926) 126-64-57</span>
 							</a>
 						</li>
 					</ul>
@@ -56,10 +56,10 @@
 					</h4>
 					<ul class="l-footer__list">
 						<li class="l-footer__list-item">
-							<a href="/">Политика <br> конфиденциальности</a>
+							<a href="/" class="l-footer__link">Политика <br> конфиденциальности</a>
 						</li>
-						<li>
-							<a href="/">Пользовательское <br> соглашение</a>
+						<li class="l-footer__list-item">
+							<a href="/" class="l-footer__link">Пользовательское <br> соглашение</a>
 						</li>
 					</ul>
 				</div>
@@ -121,6 +121,7 @@ $l-footer-logo-bg-color: $color-green-shadow;
 $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 
 .l-footer {
+	--logo-wrapper-width: 195px;
 	padding: 3.75rem 0 1rem;
 	background-color: $l-footer-bg-color;
 
@@ -132,7 +133,6 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 		color: inherit;
 		
 		&::before {
-			font-size: 1rem;
 			color: inherit;
 			background-color: rgba(255, 255, 255, 0.1);
 		}
@@ -148,8 +148,9 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 	}
 	
 	&__logo-wrapper {
-		flex-basis: 15%;
-		width: 15%;
+		flex-basis: var(--logo-wrapper-width);
+		width: var(--logo-wrapper-width);
+		margin-bottom: 2rem;
 	}
 	
 	&__logo {
@@ -161,15 +162,27 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 	}
 
 	&__links {
+		flex-basis: calc(100% - var(--logo-wrapper-width));
+		width: calc(100% - var(--logo-wrapper-width));
 		flex-grow: 1;
+		flex-wrap: wrap;
 		justify-content: space-between;
-		margin-bottom: 3.75rem;
+		margin-bottom: 2.25rem;
+	}
+	
+	&__links-col {
+		box-sizing: border-box;
+		margin-bottom: 1.5rem;
 	}
 	
 	&__link {
 		&--contact {
 			font-size: .875rem;
 			line-height: 1.35;
+			
+			.social {
+				font-size: 1rem;
+			}
 		}
 	}
 
@@ -271,6 +284,64 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 		display: flex;
 		justify-content: center;
 		width: 100%;
+	}
+	
+	@include breakpoint($breakpoint-md) {
+		--logo-wrapper-width: 150px;
+		
+		&__list-title {
+			font-size: 1.15rem;
+		}
+		
+		&__link {
+			font-size: 0.875rem;
+		}
+	}
+	
+	@include breakpoint($breakpoint-sm) {
+		padding: 2.5rem 0 .5rem;
+		
+		&__links {
+			margin-bottom: 1rem;
+		}
+		
+		&__links-col {
+			flex-basis: initial;
+		}
+		
+		&__list-item + &__list-item {
+			margin-top: .5rem;
+		}
+	}
+	
+	@include breakpoint($breakpoint-xs) {
+		padding-top: 1.5rem 0 .5rem;
+		
+		&__links {
+			flex-basis: 100%;
+			width: 100%;
+		}
+		
+		&__links-col:nth-child(odd) {
+			padding-right: .5rem;
+			// flex-basis: 100%;
+		}
+		
+		&__list-title {
+			margin-bottom: .75rem;
+		}
+		
+		&__form {
+			width: 100%;
+			flex-basis: 100%;
+			max-width: 400px;
+		}
+	}
+	
+	@include breakpoint(415px) {
+		&__links-col:last-child {
+			flex-basis: 100%;
+		}
 	}
 }
 

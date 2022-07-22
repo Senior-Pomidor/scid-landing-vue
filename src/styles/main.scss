@@ -1,5 +1,8 @@
 $body-color: $color-light-black;
 
+.nobr {
+	white-space: nowrap;
+}
 .border {
 	border: 1px solid red;
 	height: 50px;
@@ -17,9 +20,7 @@ $body-color: $color-light-black;
 	display: none;
 }
 
-main {
-	padding-top: 110px;
-}
+
 
 body {
 	font-family: 'Open Sans', sans-serif;

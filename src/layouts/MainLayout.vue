@@ -17,6 +17,19 @@
 		components: {
 			lHeader,
 			lFooter
+		},
+		mounted() {
+			setTimeout(() => {
+				this.setMainPadding()
+			}, 0)
+		},
+		methods: {
+			setMainPadding: function() {
+				const header = document.querySelector('.l-header');
+				const page = document.querySelector('.l-page');
+				
+				page.style.paddingTop = header.clientHeight + 'px';
+			}
 		}
 	}
 </script>
@@ -35,6 +48,12 @@
 		
 		footer {
 			align-self: flex-end;
+		}
+		
+		.l-page {
+			@include breakpoint($breakpoint-sm) {
+				padding-top: 60px !important;
+			}
 		}
 	}
 </style>
