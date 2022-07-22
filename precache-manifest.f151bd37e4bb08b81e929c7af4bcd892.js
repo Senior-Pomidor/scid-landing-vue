@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7b4ef3aaa5824a75009e",
-    "url": "/scid-landing-vue/css/app.4bb84158.css"
+    "revision": "fae97dc8b17134ce9376",
+    "url": "/scid-landing-vue/css/app.696df034.css"
   },
   {
-    "revision": "e1ca19d357afda0d27be",
-    "url": "/scid-landing-vue/css/chunk-19f3ffa8.c6bb9fc1.css"
+    "revision": "1af351f1e37d6922fcae",
+    "url": "/scid-landing-vue/css/chunk-026d0b5a.c6bb9fc1.css"
   },
   {
     "revision": "bfb56c71e8d0870ff7701404504dce1d",
@@ -44,16 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/scid-landing-vue/img/webfont.15adbad3.svg"
   },
   {
-    "revision": "81954dfc047434e1bca9b2a8a4b5dd5c",
+    "revision": "b0ead7efc8057b48808aab6e4ff0e50b",
     "url": "/scid-landing-vue/index.html"
   },
   {
-    "revision": "7b4ef3aaa5824a75009e",
-    "url": "/scid-landing-vue/js/app.94dd3642.js"
+    "revision": "fae97dc8b17134ce9376",
+    "url": "/scid-landing-vue/js/app.64df8b3a.js"
   },
   {
-    "revision": "e1ca19d357afda0d27be",
-    "url": "/scid-landing-vue/js/chunk-19f3ffa8.8be2a918.js"
+    "revision": "1af351f1e37d6922fcae",
+    "url": "/scid-landing-vue/js/chunk-026d0b5a.08ac14ab.js"
   },
   {
     "revision": "f470ebed25dea81c344f",
