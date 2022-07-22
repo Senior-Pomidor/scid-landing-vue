@@ -92,11 +92,6 @@
 				content: "";
 				transform: translateY(-2px);
 			}
-			
-			&:active,
-			&:active::before {
-				border-color: $burger-border-color--active;
-			}
 		}
 		
 		&__call-btn {

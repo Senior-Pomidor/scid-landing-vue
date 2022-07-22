@@ -49,20 +49,18 @@ a {
 	font-size: 1.125rem;
 	color: $btn-color;
 	border: 2px solid $btn-color;
-	border-radius: 30px;	
+	border-radius: 30px;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	-ms-border-radius: 30px;
 	-o-border-radius: 30px;
+	transition: color $transition-duration-base ease, transform $transition-duration-base ease, border-color $transition-duration-base ease;
+	-webkit-transition: color $transition-duration-base ease, transform $transition-duration-base ease, border-color $transition-duration-base ease;
+	-moz-transition: color $transition-duration-base ease, transform $transition-duration-base ease, border-color $transition-duration-base ease;
+	-ms-transition: color $transition-duration-base ease, transform $transition-duration-base ease, border-color $transition-duration-base ease;
+	-o-transition: color $transition-duration-base ease, transform $transition-duration-base ease, border-color $transition-duration-base ease;
 
-	transition: color .1s ease;
 	cursor: pointer;
-	
-	&--accent {
-		color: $btn-accent-color;
-		border-color: $btn-accent-border-color;
-	}
-
 	@include hover() {
 		color: $btn-color--hover;
 		border-color: $btn-color--hover;
@@ -75,6 +73,16 @@ a {
 		-webkit-transform: scale(.95);
 		-moz-transform: scale(.95);
 		-ms-transform: scale(.95);
+	}
+	
+	&--accent {
+		color: $btn-accent-color;
+		border-color: $btn-accent-border-color;
+		
+		@include hover() {
+			color: $btn-color--hover;
+			border-color: $btn-color--hover;
+		}
 	}
 	
 	@include breakpoint($breakpoint-sm) {

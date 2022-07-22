@@ -41,7 +41,11 @@
 			color: $link-color;
 			text-transform: uppercase;
 			box-sizing: border-box;
-			transition: color .1s ease;
+			transition: color $transition-duration-base ease;
+			-webkit-transition: color $transition-duration-base ease;
+			-moz-transition: color $transition-duration-base ease;
+			-ms-transition: color $transition-duration-base ease;
+			-o-transition: color $transition-duration-base ease;
 			
 			&--accent {
 				@include webfont-icon($webfont-icon--star);
@@ -54,7 +58,7 @@
 				}
 			}
 			
-			&:hover {
+			@include hover() {
 				color: $link-color--hover;
 			}
 			

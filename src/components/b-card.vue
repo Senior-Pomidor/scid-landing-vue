@@ -31,8 +31,8 @@
 
 <style lang="scss">
 	$card-text-color: $body-color;
-	$card-text-color--hover: $color-red;
-	$card-text-color--active: $color-accent;
+	$card-text-color--hover: $color-accent;
+	// $card-text-color--active: $color-accent;
 	
 	$card-img-wh-relations: 1.36;
 	
@@ -46,13 +46,14 @@
 			display: block;
 			padding: 1.5rem;
 			color: inherit;
+			transition: color $transition-duration-base ease, transform $transition-duration-base ease;
+			-webkit-transition: color $transition-duration-base ease, transform $transition-duration-base ease;
+			-moz-transition: color $transition-duration-base ease, transform $transition-duration-base ease;
+			-ms-transition: color $transition-duration-base ease, transform $transition-duration-base ease;
+			-o-transition: color $transition-duration-base ease, transform $transition-duration-base ease;
 			
-			&:hover {
+			@include hover() {
 				color: $card-text-color--hover;
-			}
-			
-			&:active {
-				color: $card-text-color--active;
 			}
 		}
 		
