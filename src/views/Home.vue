@@ -1,10 +1,6 @@
 <template>
 	<article class="home">
-		<h1>
-			Home
-		</h1>
-		
-		<section>
+		<section class="section">
 			<b-slider :slides="slides"></b-slider>
 		</section>
 		

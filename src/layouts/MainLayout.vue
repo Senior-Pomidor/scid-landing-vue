@@ -2,9 +2,6 @@
 	<div id="app-content">
 		<l-header />
 			<main class="l-page">
-				<h2>
-					Main
-				</h2>
 				<router-view />
 			</main>
 		<l-footer />
