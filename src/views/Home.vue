@@ -5,7 +5,7 @@
 		</h1>
 		
 		<section>
-			<b-slider></b-slider>
+			<b-slider :slides="slides"></b-slider>
 		</section>
 		
 		<section class="section services">
@@ -72,7 +72,13 @@ export default {
 					img: '/img/content/service-picture-6.jpg',
 					desc: 'Кадастровые работы в отношении земельных участков'
 				}
-			]
+			],
+			slides: [
+				{id: 1, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text-accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
+				{id: 2, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text-accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
+				{id: 3, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text-accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
+				{id: 4, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text-accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'}
+			],
 		}
 	 }
 }
