@@ -14,12 +14,12 @@
 					</h2>
 					
 					<div class="services__grid">
-						<b-card class="services__grid-item" v-for="service in services" :key="service.id" :info="service"></b-card>
+						<b-card class="services__grid-item" v-for="(service, index) in services" :key="service.id" :info="service" v-if="index < maxServices || isShow"></b-card>
 					</div>
 					
-					<router-link to="/" class="services__btn btn btn--accent">
+					<button to="/" class="services__btn btn btn--accent" v-if="!isShow" v-on:click="isShow = !isShow">
 						Все услуги
-					</router-link>
+					</button>
 				</div>
 			</div>
 		</section>
@@ -38,6 +38,8 @@ export default {
 	 },
 	 data() {
 		return {
+			isShow: false,
+			maxServices: 6,
 			services: [
 				{
 					id: '1',
