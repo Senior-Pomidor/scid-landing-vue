@@ -92,7 +92,7 @@ export default {
 		--grid-row-gap: 2rem;
 		
 		
-		padding-bottom: 2.5rem;
+		padding-bottom: 4rem;
 		
 		&__container {
 			display: flex;

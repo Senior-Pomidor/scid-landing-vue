@@ -13,17 +13,17 @@
 					</h4>
 					<ul class="l-footer__list">
 						<li class="l-footer__list-item">
-							<a href="tel:+7 (926) 126-64-57" class="l-footer__link">
+							<a href="tel:+7 (926) 126-64-57" class="l-footer__link l-footer__link--contact">
 								<i class="social social--watsapp"></i>7 (926) 126-64-57
 							</a>
 						</li>
 						<li class="l-footer__list-item">
-							<a href="tel:+7 (926) 126-64-57" class="l-footer__link">
+							<a href="tel:+7 (926) 126-64-57" class="l-footer__link l-footer__link--contact">
 								<i class="social social--mail"></i>7 (926) 126-64-57
 							</a>
 						</li>
 						<li class="l-footer__list-item">
-							<a href="tel:+7 (926) 126-64-57" class="l-footer__link">
+							<a href="tel:+7 (926) 126-64-57" class="l-footer__link l-footer__link--contact">
 								<i class="social social--telegram"></i>7 (926) 126-64-57
 							</a>
 						</li>
@@ -118,7 +118,7 @@ export default {
 $l-footer-bg-color: $color-accent;
 $l-footer-text-color: $color-white;
 $l-footer-logo-bg-color: $color-green-shadow;
-$l-footer-input-bg: rgba(255, 255, 255, 0.1);
+$l-footer-input-bg: rgba(255, 255, 255, 0.2);
 
 .l-footer {
 	padding: 3.75rem 0 1rem;
@@ -132,6 +132,7 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.1);
 		color: inherit;
 		
 		&::before {
+			font-size: 1rem;
 			color: inherit;
 			background-color: rgba(255, 255, 255, 0.1);
 		}
@@ -146,6 +147,11 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.1);
 		flex-wrap: wrap;
 	}
 	
+	&__logo-wrapper {
+		flex-basis: 15%;
+		width: 15%;
+	}
+	
 	&__logo {
 		width: 6.75rem;
 		height: 9.625rem;
@@ -153,14 +159,18 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.1);
 		border-radius: 16px;
 		margin-right: 2rem;
 	}
-	
-	&__logo-wrapper {
-		width: calc(108px + 80px);
-	}
 
 	&__links {
 		flex-grow: 1;
 		justify-content: space-between;
+		margin-bottom: 3.75rem;
+	}
+	
+	&__link {
+		&--contact {
+			font-size: .875rem;
+			line-height: 1.35;
+		}
 	}
 
 	&__list-title {
@@ -170,13 +180,15 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.1);
 		margin-bottom: 1.5rem;
 	}
 	
-	&__list-item {
-		margin-bottom: .875rem;
-		
+	&__list-item {		
 		.social::before {
 			margin-right: .5rem;
 			margin-bottom: 4px;
 		}
+	}
+	
+	&__list-item + &__list-item {
+		margin-top: .875rem;
 	}
 	
 	&__form {
@@ -195,6 +207,8 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.1);
 	
 	&__input {
 		width: 100%;
+		font-size: .875rem;
+		line-height: 1.7;
 		background-color: $l-footer-input-bg;
 		margin: 0;
 		padding: .5rem .75rem;
@@ -207,7 +221,8 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.1);
 		
 		&::placeholder {
 			color: $l-footer-text-color;
-			// line-height: ;
+			// font: 14px sans-serif;
+			// line-height: 30px;
 		}
 		&:focus,
 		&:active,

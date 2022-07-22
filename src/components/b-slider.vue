@@ -1,6 +1,5 @@
 <template>
 		<!-- :autoplay="{ delay: 5000 }" -->
-		<!-- allowTouchMove: false, -->
 	<swiper
 		:slides-per-view="1"
 		:loop="true"
