@@ -47,6 +47,7 @@
 				@include webfont-icon($webfont-icon--star);
 		
 				&::before {
+					width: 0.875rem;
 					color: $color-accent;
 					margin-right: 7px;
 					font-size: 0.875rem;

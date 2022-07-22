@@ -5,9 +5,7 @@
 				<img :src="info.img" alt="Услуга" class="b-card__img">
 			</div>
 			
-			<p class="b-card__desc">
-				{{ info.desc }}
-			</p>
+			<p class="b-card__desc" v-html="info.desc"></p>
 		</router-link>
 	</article>
 </template>

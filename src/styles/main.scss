@@ -13,6 +13,10 @@ $body-color: $color-light-black;
 	box-sizing: border-box;
 }
 
+.hidden {
+	display: none;
+}
+
 main {
 	padding-top: 110px;
 }

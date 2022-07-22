@@ -1,6 +1,8 @@
 <template>
 	<article class="home">
+		<h1 class="hidden">Главный заголовок</h1>
 		<section class="section">
+			<h2 class="hidden">Заголовок секции со слайдером</h2>
 			<b-slider :slides="slides"></b-slider>
 		</section>
 		
@@ -41,39 +43,39 @@ export default {
 					id: '1',
 					link: '/',
 					img: '/img/content/service-picture-1.jpg',
-					desc: 'Кадастровые работы в отношении земельных участков'
+					desc: 'Кадастровые работы в&nbsp;отношении земельных участков'
 				}, {
 					id: '2',
 					link: '/',
 					img: '/img/content/service-picture-2.jpg',
-					desc: 'Кадастровые работы в отношении земельных участков'
+					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}, {
 					id: '3',
 					link: '/',
 					img: '/img/content/service-picture-3.jpg',
-					desc: 'Кадастровые работы в отношении земельных участков'
+					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}, {
 					id: '4',
 					link: '/',
 					img: '/img/content/service-picture-4.jpg',
-					desc: 'Кадастровые работы в отношении земельных участков'
+					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}, {
 					id: '5',
 					link: '/',
 					img: '/img/content/service-picture-5.jpg',
-					desc: 'Кадастровые работы в отношении земельных участков'
+					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}, {
 					id: '6',
 					link: '/',
 					img: '/img/content/service-picture-6.jpg',
-					desc: 'Кадастровые работы в отношении земельных участков'
+					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}
 			],
 			slides: [
-				{id: 1, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text-accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
-				{id: 2, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text-accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
-				{id: 3, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text-accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
-				{id: 4, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text-accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'}
+				{id: 1, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
+				{id: 2, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
+				{id: 3, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'},
+				{id: 4, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: '/img/content/slides/slide-1.jpg'}
 			],
 		}
 	 }
@@ -81,6 +83,9 @@ export default {
 </script>
 
 <style lang="scss">
+	.home {
+		// 
+	}
 	.services {
 		--grid-columns: 3;
 		--grid-column-gap: 1.5rem;

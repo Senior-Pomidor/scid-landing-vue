@@ -1,9 +1,9 @@
 <template>
+		<!-- :autoplay="{ delay: 5000 }" -->
 	<swiper
 		:slides-per-view="1"
 		:loop="true"
 		:speed="1500"
-		:autoplay="{ delay: 5000 }"
 		:initialSlide="1"
 		:pagination="{ clickable: true, el: '.b-slider__pagination', bulletClass: 'b-slider__pagination-bullet', bulletActiveClass: 'b-slider__pagination-bullet--active' }"
 		class="b-slider"
@@ -11,7 +11,7 @@
 		<swiper-slide v-for="slide in slides" :key="slide.id">
 			<div :style="{backgroundImage: `url(${slide.img})`}" class="b-slider__slide">
 				<div class="container b-slider__container">
-					<p class="b-slider__text" v-html="slide.text"></p>
+					<h2 class="b-slider__text" v-html="slide.text"></h2>
 				</div>
 			</div>
 		</swiper-slide>
@@ -63,24 +63,44 @@
 <style lang="scss">
 	$bullet-bg-color: $color-light-grey;
 	$bullet-bg-color--active: $color-accent;
+	$slider-text-color--accent: $color-accent;
 	
 	.b-slider {
 		width: 100%;
 		// max-width: 1440px;
 		
+		&__text {
+			width: 100%;
+			max-width: 794px;
+			font-size: 4rem;
+			font-weight: 600;
+			line-height: 1.36;
+			margin: 0;
+			
+			&--accent {
+				color: $slider-text-color--accent;
+			}
+		}
+		
 		&__slide {
-			min-height: 672px;
 			min-width: 100%;
 			width: 100%;
+			height: 672px;
 			background-repeat: no-repeat;
 			background-size: cover;
+		}
+		
+		&__container {
+			height: 100%;
+			display: flex;
+			align-items: center;
 		}
 		
 		&__pagination {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin: 1.5rem 0;
+			margin-top: 1.5rem;
 			
 			&-bullet {
 				display: inline-block;
@@ -116,6 +136,23 @@
 			
 			&-bullet + &-bullet {
 				margin-left: 1.125rem;
+			}
+		}
+		
+		
+		@include breakpoint($breakpoint-md) {
+			&__slide {
+				height: 524px;
+			}
+		}
+		
+		@include breakpoint($breakpoint-xs) {
+			&__slide {
+				height: 50vh;
+			}
+			
+			&__pagination {
+				// display: none;
 			}
 		}
 	}

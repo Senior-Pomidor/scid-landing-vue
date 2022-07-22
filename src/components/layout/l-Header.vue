@@ -62,7 +62,7 @@
 		
 		&__nav {
 			display: flex;
-			align-items: baseline;
+			align-items: center;
 			background-color: $l-header-nav-bg;
 			
 			&.open {
