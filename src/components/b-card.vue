@@ -1,19 +1,34 @@
 <template>
 	<article class="b-card">
-		<router-link to="/" class="b-card__link">
+		<router-link :to="info.link" class="b-card__link">
 			<div class="b-card__img-wrapper">
-				<img src="/img/content/unsplash_688Fna1pwOQ.jpg" alt="" class="b-card__img">
+				<img :src="info.img" alt="Услуга" class="b-card__img">
 			</div>
 			
-			<p class="b-card__info">
-				Кадастровые работы в отношении земельных участков
+			<p class="b-card__desc">
+				{{ info.desc }}
 			</p>
 		</router-link>
 	</article>
 </template>
 
 <script>
+	import { type } from 'os';
 
+	export default {
+		name: 'b-card',
+		props: {
+			info: {
+				type: Object,
+				required: true,
+				default: {
+					link: '/',
+					img: '/img/content/card-picture-plug.jpg',
+					desc: 'Описание услуги'
+				}
+			}
+		}
+	}
 </script>
 
 <style lang="scss">
@@ -62,9 +77,18 @@
 			object-fit: cover;
 		}
 		
-		&__info {
+		&__desc {
+			font-size: 1.25rem;
+			font-weight: 600;
+			left: 1.3;
 			color: inherit;
 			margin-bottom: 0;
+		}
+		
+		@include breakpoint($breakpoint-md) {
+			&__desc {
+				font-size: 1.125rem;
+			}
 		}
 	}
 </style>

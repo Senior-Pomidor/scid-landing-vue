@@ -12,12 +12,7 @@
 					</h2>
 					
 					<div class="services__grid">
-						<b-card class="services__grid-item"></b-card>
-						<b-card class="services__grid-item"></b-card>
-						<b-card class="services__grid-item"></b-card>
-						<b-card class="services__grid-item"></b-card>
-						<b-card class="services__grid-item"></b-card>
-						<b-card class="services__grid-item"></b-card>
+						<b-card class="services__grid-item" v-for="service in services" :key="service.id" :info="service"></b-card>
 					</div>
 					
 					<router-link to="/" class="services__btn btn btn--accent">
@@ -34,9 +29,45 @@ import bCard from '@/components/b-card.vue'
 
 export default {
 	 name: 'home',
-	 
 	 components: {
 		 bCard
+	 },
+	 data() {
+		return {
+			services: [
+				{
+					id: '1',
+					link: '/',
+					img: '/img/content/service-picture-1.jpg',
+					desc: 'Кадастровые работы в отношении земельных участков'
+				}, {
+					id: '2',
+					link: '/',
+					img: '/img/content/service-picture-2.jpg',
+					desc: 'Кадастровые работы в отношении земельных участков'
+				}, {
+					id: '3',
+					link: '/',
+					img: '/img/content/service-picture-3.jpg',
+					desc: 'Кадастровые работы в отношении земельных участков'
+				}, {
+					id: '4',
+					link: '/',
+					img: '/img/content/service-picture-4.jpg',
+					desc: 'Кадастровые работы в отношении земельных участков'
+				}, {
+					id: '5',
+					link: '/',
+					img: '/img/content/service-picture-5.jpg',
+					desc: 'Кадастровые работы в отношении земельных участков'
+				}, {
+					id: '6',
+					link: '/',
+					img: '/img/content/service-picture-6.jpg',
+					desc: 'Кадастровые работы в отношении земельных участков'
+				}
+			]
+		}
 	 }
 }
 </script>
@@ -44,6 +75,8 @@ export default {
 <style lang="scss">
 	.services {
 		--grid-columns: 3;
+		--grid-column-gap: 1.5rem;
+		--grid-row-gap: 2rem;
 		
 		
 		padding-bottom: 2.5rem;
@@ -56,8 +89,8 @@ export default {
 		&__grid {
 			display: grid;
 			grid-template-columns: repeat(var(--grid-columns), 1fr);
-			grid-column-gap: 1.5rem;
-			grid-row-gap: 2rem;
+			grid-column-gap: var(--grid-column-gap);
+			grid-row-gap: var(--grid-row-gap);
 			margin-bottom: 2rem;
 		}
 		
@@ -69,8 +102,15 @@ export default {
 			align-self: center;
 		}
 		
+		@include breakpoint($breakpoint-md) {
+			--grid-column-gap: 1rem;
+			--grid-row-gap: 1.5rem;
+		}
+		
 		@include breakpoint($breakpoint-sm) {
 			--grid-columns: 2;
+			// --grid-column-gap: .5rem;
+			--grid-row-gap: 1rem;
 		}
 		
 		@include breakpoint($breakpoint-xs) {
