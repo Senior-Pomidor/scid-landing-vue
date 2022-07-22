@@ -4,6 +4,10 @@
 			Home
 		</h1>
 		
+		<section>
+			<b-slider></b-slider>
+		</section>
+		
 		<section class="section services">
 			<div class="container">
 				<div class="services__container">
@@ -25,12 +29,14 @@
 </template>
 	
 <script>
-import bCard from '@/components/b-card.vue'
+import bCard from '@/components/b-card.vue';
+import bSlider from '@/components/b-slider.vue'
 
 export default {
 	 name: 'home',
 	 components: {
-		 bCard
+		 bCard,
+		 bSlider
 	 },
 	 data() {
 		return {
