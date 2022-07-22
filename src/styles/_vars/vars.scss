@@ -12,11 +12,13 @@ $body-color: $color-light-black;
 
 $link-color: $body-color;
 $link-color--hover: $color-accent;
-$link-color--active: $color-red;
+$link-color--active: $color-accent;
 
-$btn-border-color: $link-color;
-$btn-border-color--hover: $link-color--hover;
-$btn-border-color--active: $link-color--active;
+
+
+$btn-color: $link-color;
+$btn-color--hover: $link-color--hover;
+$btn-color--active: $link-color--active;
 
 $btn-accent-color: $color-accent;
-$btn-accent-border-color: $btn-accent-color;
+$btn-accent-border-color: $color-accent;
