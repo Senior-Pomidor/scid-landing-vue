@@ -6,7 +6,7 @@
     "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-and-deploy": "git co gh-pages && vue-cli-service build && git add -A && git commit -m 'deploy' && git subtree push --prefix dist origin gh-pages && git co -",
+    "build-and-deploy": "git co gh-pages && git merge master && vue-cli-service build && git add -A && git commit -m 'deploy' && git subtree push --prefix dist origin gh-pages && git co -",
     "commit-and-deploy": "git co gh-pages && git add -A && git commit -m 'deploy' && git subtree push --prefix dist origin gh-pages",
     "deploy": "git co gh-pages && git add -A && git commit -m 'deploy' && git subtree push --prefix dist origin gh-pages"
   },

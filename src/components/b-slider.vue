@@ -150,7 +150,11 @@
 		
 		@include breakpoint($breakpoint-xs) {
 			&__slide {
-				height: 50vh;
+				height: 45vh;
+			}
+			
+			&__text {
+				font-size: 2rem;
 			}
 			
 			&__pagination {
