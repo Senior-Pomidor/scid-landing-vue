@@ -3,7 +3,7 @@
 		<div class="l-header-top">
 			<div class="l-header__container container">
 				<div class="l-header__logo">
-					<img src="/img/icons/logo.svg" alt="SCID logo" class="l-header__logo-img"/>
+					<img src="img/icons/logo.svg" alt="SCID logo" class="l-header__logo-img"/>
 				</div>
 				
 				<div class="l-header__nav" :class="{open: !isOpen}">
