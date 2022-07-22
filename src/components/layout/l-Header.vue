@@ -37,13 +37,15 @@
 </script>
 
 <style lang="scss">
-	$header-nav-bg: $color-white;
+	$l-header-nav-bg: $color-white;
+	$l-header-bg-color: $color-white;
 	$burger-border-color: $body-color;
 	$burger-border-color--active: $link-color--hover;
 	
 	.l-header {
 		position: fixed;
 		width: 100%;
+		background-color: $l-header-bg-color;
 		
 		&-top {
 			position: relative;
@@ -60,7 +62,7 @@
 		&__nav {
 			display: flex;
 			align-items: baseline;
-			background-color: $header-nav-bg;
+			background-color: $l-header-nav-bg;
 			
 			&.open {
 				display: flex;

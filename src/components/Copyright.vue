@@ -16,5 +16,11 @@
 </script>
 
 <style lang="scss">
-	
+	.copyright {
+		display: inline-block;
+		font-family: Inter, sans-serif;
+		font-size: .875rem;
+		line-height: 1.7;
+		padding: 0.625rem;
+	}
 </style>
