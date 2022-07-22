@@ -2,8 +2,8 @@
 
 $breakpoint-xs: 510px;
 $breakpoint-sm: 798px;
-$breakpoint-md: 1054;
-$breakpoint-lg: 1270;
+$breakpoint-md: 1054px;
+$breakpoint-lg: 1270px;
 
 $container-padding: 1rem;
 
@@ -18,4 +18,5 @@ $btn-border-color: $link-color;
 $btn-border-color--hover: $link-color--hover;
 $btn-border-color--active: $link-color--active;
 
-$btn-accent-border-color: $color-accent;
+$btn-accent-color: $color-accent;
+$btn-accent-border-color: $btn-accent-color;

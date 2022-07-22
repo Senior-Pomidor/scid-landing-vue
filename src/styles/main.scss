@@ -26,8 +26,6 @@ body {
 	margin-top: 0;
 }
 
-
-
 ul,
 ol {
 	margin: 0;
@@ -53,8 +51,10 @@ a {
 	-o-border-radius: 30px;
 
 	transition: color .1s ease;
+	cursor: pointer;
 	
 	&--accent {
+		color: $btn-accent-color;
 		border-color: $btn-accent-border-color;
 	}
 
@@ -115,5 +115,16 @@ a {
 		color: $color-white;
 		background-color: $color-accent;
 		border-radius: 50%;
+	}
+}
+
+.section {
+	padding: 1.5rem 0;
+	
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 600;
+		line-height: 1.4;
+		margin-bottom: 2rem;
 	}
 }

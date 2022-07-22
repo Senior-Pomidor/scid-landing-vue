@@ -46,6 +46,7 @@
 		position: fixed;
 		width: 100%;
 		background-color: $l-header-bg-color;
+		z-index: 10;
 		
 		&-top {
 			position: relative;
