@@ -69,6 +69,16 @@ export default {
 					link: '/',
 					img: 'img/content/service-picture-6.jpg',
 					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+				}, {
+					id: '7',
+					link: '/',
+					img: 'img/content/service-picture-6.jpg',
+					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+				}, {
+					id: '8',
+					link: '/',
+					img: 'img/content/service-picture-6.jpg',
+					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
 				}
 			],
 			slides: [
