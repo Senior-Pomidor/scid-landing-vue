@@ -5,10 +5,10 @@
 				<router-link to="/" class="b-nav__link">Кейсы</router-link>
 			</li>
 			<li class="b-nav__item">
-				<router-link to="/" class="b-nav__link b-nav__link--accent">Бизнесу</router-link>
+				<router-link to="/redirect" class="b-nav__link b-nav__link--accent">Бизнесу</router-link>
 			</li>
 			<li class="b-nav__item">
-				<router-link to="/" class="b-nav__link">Услуги</router-link>
+				<router-link to="/services" class="b-nav__link">Услуги</router-link>
 			</li>
 			<li class="b-nav__item">
 				<router-link to="/" class="b-nav__link">Контакты</router-link>
