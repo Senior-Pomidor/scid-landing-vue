@@ -56,10 +56,10 @@
 					</h4>
 					<ul class="l-footer__list">
 						<li class="l-footer__list-item">
-							<a href="/" class="l-footer__link">Политика <br> конфиденциальности</a>
+							<a href="files/documents/privacy-policy.pdf" class="l-footer__link" target="_blank">Политика <br> конфиденциальности</a>
 						</li>
 						<li class="l-footer__list-item">
-							<a href="/" class="l-footer__link">Пользовательское <br> соглашение</a>
+							<a href="files/documents/user-agreement.pdf" class="l-footer__link" target="_blank">Пользовательское <br> соглашение</a>
 						</li>
 					</ul>
 				</div>
@@ -78,17 +78,17 @@
 
 					<ul class="l-footer__socials">
 						<li class="l-footer__socials-item">
-							<a href="" class="l-footer__social-link">
+							<a href="https://vk.com/scidru" class="l-footer__social-link" target="_blank">
 								<i class="social social--instagram"></i>
 							</a>
 						</li>
 						<li class="l-footer__socials-item">
-							<a href="" class="l-footer__social-link">
+							<a href="https://vk.com/scidru" class="l-footer__social-link" target="_blank">
 								<i class="social social--vk"></i>
 							</a>
 						</li>
 						<li class="l-footer__socials-item">
-							<a href="" class="l-footer__social-link social">
+							<a href="https://vk.com/scidru" class="l-footer__social-link social" target="_blank">
 								<i class="social social--facebook"></i>
 							</a>
 						</li>
