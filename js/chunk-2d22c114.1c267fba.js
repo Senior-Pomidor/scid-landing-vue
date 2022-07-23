@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d22c114"],{f23e:function(e,n,t){"use strict";t.r(n);var c=function(){var e=this,n=e._self._c;return n("Home")},o=[],u=t("bb51"),s=t("2f62"),l={components:{Home:u["default"]},methods:{...Object(s["b"])(["FETCH_SERVICES"])},mounted(){this.FETCH_SERVICES()}},a=l,b=t("0c7c"),d=Object(b["a"])(a,c,o,!1,null,null,null);n["default"]=d.exports}}]);
+//# sourceMappingURL=chunk-2d22c114.1c267fba.js.map

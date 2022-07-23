@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/scid-landing-vue/precache-manifest.f151bd37e4bb08b81e929c7af4bcd892.js"
+  "/scid-landing-vue/precache-manifest.b3f8ebc57a32282e5a6278f375df7a1b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "scid-landing-vue"});
