@@ -78,17 +78,17 @@
 
 					<ul class="l-footer__socials">
 						<li class="l-footer__socials-item">
-							<a href="https://vk.com/scidru" class="l-footer__social-link" target="_blank">
+							<a href="https://vk.com/scidru" class="l-footer__link l-footer__social-link" target="_blank">
 								<i class="social social--instagram"></i>
 							</a>
 						</li>
 						<li class="l-footer__socials-item">
-							<a href="https://vk.com/scidru" class="l-footer__social-link" target="_blank">
+							<a href="https://vk.com/scidru" class="l-footer__link l-footer__social-link" target="_blank">
 								<i class="social social--vk"></i>
 							</a>
 						</li>
 						<li class="l-footer__socials-item">
-							<a href="https://vk.com/scidru" class="l-footer__social-link social" target="_blank">
+							<a href="https://vk.com/scidru" class="l-footer__link l-footer__social-link" target="_blank">
 								<i class="social social--facebook"></i>
 							</a>
 						</li>
@@ -120,8 +120,14 @@ $l-footer-text-color: $color-white;
 $l-footer-logo-bg-color: $color-green-shadow;
 $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 
+$l-footer-social-bg: rgba(255, 255, 255, 0.1);
+$l-footer-social-bg--hover: rgba(255, 255, 255, 0.2);
+
+$l-footer-link-color--hover: $body-color;
+
 .l-footer {
 	--logo-wrapper-width: 195px;
+	
 	padding: 3.75rem 0 1rem;
 	background-color: $l-footer-bg-color;
 
@@ -134,7 +140,14 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 		
 		&::before {
 			color: inherit;
-			background-color: rgba(255, 255, 255, 0.1);
+			background-color: $l-footer-social-bg;
+		}
+		
+		@include hover(){
+			&::before {
+				color: $l-footer-link-color--hover;
+				background: $l-footer-social-bg--hover;
+			}
 		}
 	}
 
@@ -176,12 +189,33 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 	}
 	
 	&__link {
+		transition: color $transition-duration-base ease, background-color $transition-duration-base ease;
+		-webkit-transition: color $transition-duration-base ease, background-color $transition-duration-base ease;
+		-moz-transition: color $transition-duration-base ease, background-color $transition-duration-base ease;
+		-ms-transition: color $transition-duration-base ease, background-color $transition-duration-base ease;
+		-o-transition: color $transition-duration-base ease, background-color $transition-duration-base ease;
+		
+
+		
+		* {
+			color: inherit;
+		}
+		
 		&--contact {
 			font-size: .875rem;
 			line-height: 1.35;
 			
 			.social {
 				font-size: 1rem;
+			}
+		}
+		
+		
+		@include hover() {
+			color: $l-footer-link-color--hover;
+			
+			.social::before {
+				background-color: $l-footer-social-bg--hover;
 			}
 		}
 	}
@@ -193,7 +227,7 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 		margin-bottom: 1.5rem;
 	}
 	
-	&__list-item {		
+	&__list-item {
 		.social::before {
 			margin-right: .5rem;
 			margin-bottom: 4px;
@@ -229,20 +263,32 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 		border: none;
 		border-radius: 8px;
 		box-sizing: border-box;
+		transition: box-shadow $transition-duration-base ease;
+		-webkit-transition: box-shadow $transition-duration-base ease;
+		-moz-transition: box-shadow $transition-duration-base ease;
+		-ms-transition: box-shadow $transition-duration-base ease;
+		-o-transition: box-shadow $transition-duration-base ease;
 		
 		@include webfont-icon($webfont-icon--send);
 		
 		&::placeholder {
 			color: $l-footer-text-color;
-			// font: 14px sans-serif;
-			// line-height: 30px;
 		}
+		
 		&:focus,
 		&:active,
 		&:hover {
 			border: none;
 			outline: none;
-    	outline-offset: 0;
+			outline-offset: 0;
+		}
+		
+		@include hover() {
+			box-shadow: 0px 0px 4px 0px #ffffff;
+		}
+		
+		&:focus {
+			box-shadow: 0px 0px 4px 0px #ffffff;
 		}
 	}
 	
@@ -255,6 +301,11 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 		padding: 0;
 		margin: 0;
 		border: none;
+		transition: color $transition-duration-base ease;
+		-webkit-transition: color $transition-duration-base ease;
+		-moz-transition: color $transition-duration-base ease;
+		-ms-transition: color $transition-duration-base ease;
+		-o-transition: color $transition-duration-base ease;
 		
 		@include webfont-icon($webfont-icon--send);
 		// transform: translateY(-50%);
@@ -269,6 +320,10 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 			transform: translate(-50%, -50%);
 			cursor: pointer;
 		}
+		
+		@include hover() {
+			color: $l-footer-link-color--hover;
+		}
 	}
 
 	&__socials {
@@ -279,7 +334,6 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 		margin-left: 1rem;
 	}
 	
-
 	&__copyright {
 		display: flex;
 		justify-content: center;
@@ -344,25 +398,4 @@ $l-footer-input-bg: rgba(255, 255, 255, 0.2);
 		}
 	}
 }
-
-// .l-footer__socials-item {
-// 	margin-right: 1rem;
-// }
-
-// .social {
-// 	display: inline-block;
-// 	@include webfont-icon($webfont-icon--watsapp);
-
-// 	&::before {
-// 		display: inline-flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 		width: 2rem;
-// 		height: 2rem;
-// 		color: $color-white;
-// 		background-color: $color-accent;
-// 		border-radius: 50%;
-// 		margin-right: .5rem;
-// 	}
-// }
 </style>
