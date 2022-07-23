@@ -1,29 +1,27 @@
 <template>
 	<article class="b-card">
-		<router-link :to="info.link" class="b-card__link">
+		<router-link to="/" class="b-card__link">
 			<div class="b-card__img-wrapper">
-				<img :src="info.img" alt="Услуга" class="b-card__img">
+				<img :src="info.image" alt="Услуга" class="b-card__img">
 			</div>
 			
-			<p class="b-card__desc" v-html="info.desc"></p>
+			<p class="b-card__desc" v-html="info.title"></p>
 		</router-link>
 	</article>
 </template>
 
 <script>
-	import { type } from 'os';
-
 	export default {
 		name: 'b-card',
 		props: {
 			info: {
 				type: Object,
 				required: true,
-				default: {
-					link: '/',
-					img: '/img/content/card-picture-plug.jpg',
-					desc: 'Описание услуги'
-				}
+				default: () => ({
+					// link: '/',
+					image: '/img/content/card-picture-plug.jpg',
+					title: 'Описание услуги'
+				})
 			}
 		}
 	}
@@ -73,7 +71,7 @@
 			width: 100%;
 			height: 100%;
 			max-width: 100%;
-			object-fit: cover;
+			object-fit: contain;
 		}
 		
 		&__desc {

@@ -13,11 +13,12 @@
 						Наши услуги
 					</h2>
 					
+					
 					<div class="services__grid">
-						<b-card class="services__grid-item" v-for="(service, index) in services" :key="service.id" :info="service" v-if="index < maxServices || isShow"></b-card>
+						<b-card class="services__grid-item" v-for="(service, index) in this.$store.state.services.services" :key="service.id" :info="service" v-if="index < maxServices || isShow"></b-card>
 					</div>
 					
-					<button to="/" class="services__btn btn btn--accent" v-if="!isShow" v-on:click="isShow = !isShow">
+					<button class="services__btn btn btn--accent" v-if="!isShow" v-on:click="isShow = !isShow">
 						Все услуги
 					</button>
 				</div>
@@ -28,7 +29,8 @@
 	
 <script>
 import bCard from '@/components/b-card.vue';
-import bSlider from '@/components/b-slider.vue'
+import bSlider from '@/components/b-slider.vue';
+import {mapActions} from 'vuex';
 
 export default {
 	 name: 'home',
@@ -40,49 +42,49 @@ export default {
 		return {
 			isShow: false,
 			maxServices: 6,
-			services: [
-				{
-					id: '1',
-					link: '/',
-					img: 'img/content/service-picture-1.jpg',
-					desc: 'Кадастровые работы в&nbsp;отношении земельных участков'
-				}, {
-					id: '2',
-					link: '/',
-					img: 'img/content/service-picture-2.jpg',
-					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
-				}, {
-					id: '3',
-					link: '/',
-					img: 'img/content/service-picture-3.jpg',
-					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
-				}, {
-					id: '4',
-					link: '/',
-					img: 'img/content/service-picture-4.jpg',
-					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
-				}, {
-					id: '5',
-					link: '/',
-					img: 'img/content/service-picture-5.jpg',
-					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
-				}, {
-					id: '6',
-					link: '/',
-					img: 'img/content/service-picture-6.jpg',
-					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
-				}, {
-					id: '7',
-					link: '/',
-					img: 'img/content/service-picture-6.jpg',
-					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
-				}, {
-					id: '8',
-					link: '/',
-					img: 'img/content/service-picture-6.jpg',
-					desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
-				}
-			],
+			// services: [
+			// 	{
+			// 		id: '1',
+			// 		link: '/',
+			// 		img: 'img/content/service-picture-1.jpg',
+			// 		desc: 'Кадастровые работы в&nbsp;отношении земельных участков'
+			// 	}, {
+			// 		id: '2',
+			// 		link: '/',
+			// 		img: 'img/content/service-picture-2.jpg',
+			// 		desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+			// 	}, {
+			// 		id: '3',
+			// 		link: '/',
+			// 		img: 'img/content/service-picture-3.jpg',
+			// 		desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+			// 	}, {
+			// 		id: '4',
+			// 		link: '/',
+			// 		img: 'img/content/service-picture-4.jpg',
+			// 		desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+			// 	}, {
+			// 		id: '5',
+			// 		link: '/',
+			// 		img: 'img/content/service-picture-5.jpg',
+			// 		desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+			// 	}, {
+			// 		id: '6',
+			// 		link: '/',
+			// 		img: 'img/content/service-picture-6.jpg',
+			// 		desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+			// 	}, {
+			// 		id: '7',
+			// 		link: '/',
+			// 		img: 'img/content/service-picture-6.jpg',
+			// 		desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+			// 	}, {
+			// 		id: '8',
+			// 		link: '/',
+			// 		img: 'img/content/service-picture-6.jpg',
+			// 		desc: 'Кадастровые работы <br> в&nbsp;отношении земельных участков'
+			// 	}
+			// ],
 			slides: [
 				{id: 1, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: 'img/content/slides/slide-1.jpg'},
 				{id: 2, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: 'img/content/slides/slide-1.jpg'},
@@ -90,6 +92,13 @@ export default {
 				{id: 4, text: 'Lorem ipsum dolor sit amet, <span class="b-slider__text--accent">consectetur adipiscing elit</span>', img: 'img/content/slides/slide-1.jpg'}
 			],
 		}
+	 },
+	 methods: {
+		...mapActions(['FETCH_SERVICES'])
+	 },
+	 mounted() {
+		this.FETCH_SERVICES();
+		// console.log(this.$store.state.services.services)
 	 }
 }
 </script>
