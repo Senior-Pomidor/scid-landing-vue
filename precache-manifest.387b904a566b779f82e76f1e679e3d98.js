@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cb0c1d0087ebb1397c98",
+    "revision": "09787208849e12786a22",
     "url": "/scid-landing-vue/css/app.e123a56a.css"
   },
   {
@@ -52,12 +52,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/scid-landing-vue/img/webfont.15adbad3.svg"
   },
   {
-    "revision": "999cac73f737226e37d03d7248bb16a3",
+    "revision": "395bd4295294cb67c6cc2ff074375ccd",
     "url": "/scid-landing-vue/index.html"
   },
   {
-    "revision": "cb0c1d0087ebb1397c98",
-    "url": "/scid-landing-vue/js/app.9bd156fc.js"
+    "revision": "09787208849e12786a22",
+    "url": "/scid-landing-vue/js/app.5038dff2.js"
   },
   {
     "revision": "9a8c1ea14ae0e109b9a8",
