@@ -69,9 +69,9 @@
 						Будьте в курсе
 					</h4>
 					
-					<form action="" class="l-footer__form">
+					<form class="l-footer__form" @submit.prevent="sendMail()">
 						<fieldset class="l-footer__fieldset">
-							<input type="email" placeholder="E ‒ mail" class="l-footer__input">
+							<input type="email" placeholder="E ‒ mail" class="l-footer__input" v-model.trim="email" ref="input-email">
 							<button type="submit" class="l-footer__submit-btn" title="Отправить"></button>
 						</fieldset>
 					</form>
@@ -110,6 +110,24 @@ export default {
 	name: 'l-header',
 	components: {
 		bCopyright
+	},
+	data() {
+		return {
+			email: ''
+		}
+	},
+	methods: {
+		sendMail() {
+			let message = this.email
+											? `Спасибо за подписку!\n Вы будете получать новости на почту ${this.email}.`
+											: `Пожалуйста введите email`
+											
+			// POST запрос с отправкой email
+			
+			alert(message);
+			this.email = '';
+			this.$refs['input-email'].blur(); //снятие фокуса с инпута
+		}
 	}
 }
 </script>
