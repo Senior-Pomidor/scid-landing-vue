@@ -146,6 +146,17 @@
 			&__slide {
 				height: 524px;
 			}
+			
+			&__text {
+				max-width: 594px;
+				font-size: 3.5rem;
+			}
+		}
+		
+		@include breakpoint($breakpoint-sm) {
+			&__text {
+				font-size: 3rem;
+			}
 		}
 		
 		@include breakpoint($breakpoint-xs) {

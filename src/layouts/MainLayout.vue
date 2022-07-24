@@ -21,7 +21,7 @@
 		mounted() {
 			setTimeout(() => {
 				this.setMainPadding()
-			}, 0)
+			}, 100)
 		},
 		methods: {
 			setMainPadding: function() {

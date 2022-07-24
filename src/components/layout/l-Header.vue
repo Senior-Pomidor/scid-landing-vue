@@ -98,6 +98,12 @@
 			margin-left: 2.5rem;
 		}
 		
+		@include breakpoint($breakpoint-md) {
+			&-top {
+				padding: 1rem 0;
+			}
+		}
+		
 		@include breakpoint($breakpoint-sm) {
 			&-top {
 				padding: .5rem 0;
