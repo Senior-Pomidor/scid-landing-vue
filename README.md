@@ -1,4 +1,6 @@
 # [scid-landing-vue](https://senior-pomidor.github.io/scid-landing-vue/)
+
+[Макет](https://www.figma.com/file/RJsV6mHBxzEnrYVmNLdcSi/test?node-id=2%3A637)
 ## Комментарии
 ### Функционал
 В секции *"Наши услуги"* имитация получения данных (мокап в *mockup.json*) с сервера через **Vuex**    
