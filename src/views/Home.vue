@@ -63,14 +63,10 @@ export default {
 </script>
 
 <style lang="scss">
-	.home {
-		// 
-	}
 	.services {
 		--grid-columns: 3;
 		--grid-column-gap: 1.5rem;
 		--grid-row-gap: 2rem;
-		
 		
 		padding-bottom: 4rem;
 		
@@ -84,7 +80,6 @@ export default {
 			grid-template-columns: repeat(var(--grid-columns), 1fr);
 			grid-column-gap: var(--grid-column-gap);
 			grid-row-gap: var(--grid-row-gap);
-			margin-bottom: 2rem;
 		}
 		
 		&__grid-item {
@@ -93,17 +88,20 @@ export default {
 		
 		&__btn {
 			align-self: center;
+			margin-top: 2rem;
 		}
 		
 		@include breakpoint($breakpoint-md) {
 			--grid-column-gap: 1rem;
 			--grid-row-gap: 1.5rem;
+			
+			padding-bottom: 3rem;
 		}
 		
 		@include breakpoint($breakpoint-sm) {
 			--grid-columns: 2;
-			// --grid-column-gap: .5rem;
 			--grid-row-gap: 1rem;
+			
 		}
 		
 		@include breakpoint($breakpoint-xs) {

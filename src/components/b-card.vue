@@ -77,15 +77,24 @@
 		&__desc {
 			font-size: 1.25rem;
 			font-weight: 600;
-			left: 1.3;
+			line-height: 1.3;
 			color: inherit;
 			margin-bottom: 0;
 		}
 		
 		@include breakpoint($breakpoint-md) {
+			
+			&__link {
+				padding: 1rem;
+			}
+			
 			&__desc {
 				font-size: 1.125rem;
 			}
+		}
+		
+		@include breakpoint($breakpoint-xs) {
+			font-size: 1.1rem;
 		}
 	}
 </style>
