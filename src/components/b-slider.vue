@@ -5,7 +5,7 @@
 		:loop="true"
 		:speed="1500"
 		:autoplay="{ delay: 5000 }"
-		:allowTouchMove="false"
+		:allowTouchMove="true"
 		:initialSlide="1"
 		:pagination="{ clickable: true, el: '.b-slider__pagination', bulletClass: 'b-slider__pagination-bullet', bulletActiveClass: 'b-slider__pagination-bullet--active' }"
 		class="b-slider"
