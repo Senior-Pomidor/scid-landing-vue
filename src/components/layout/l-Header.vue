@@ -50,7 +50,7 @@
 		
 		&-top {
 			position: relative;
-			padding: 1.5rem 0;
+			padding: 2rem 0 1.1rem;
 			box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.07);
 			box-sizing: border-box;
 		}
